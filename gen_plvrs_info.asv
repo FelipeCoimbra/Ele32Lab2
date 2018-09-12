@@ -1,0 +1,7 @@
+function [ plvrs_inf ] = gen_pal_inf( n )
+    plvrs_inf = []
+    if n == 0 
+        return p
+    end
+end
+
