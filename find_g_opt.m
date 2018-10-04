@@ -1,4 +1,4 @@
-function [ g_otimo ] = find_g_opt(n,k)
+function [ g_otimo, dist_min ] = find_g_opt(n,k)
    plvrs_info = gen_plvrs_info(k);
    maiordistmin = -1;
    g_otimo = [];
@@ -21,6 +21,7 @@ function [ g_otimo ] = find_g_opt(n,k)
         if menordist > maiordistmin
            maiordistmin = menordist;
            g_otimo = g;
+           dist_min = menordist;
         end
        end
    end

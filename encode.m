@@ -3,9 +3,9 @@ function [v] = encode(u,g)
 %       u : Information Word of size K
 %       g : Generator vector
 %   v : Encoded Word of size N
-    polyu = fliprl(u);
-    polyg = fliprl(g);
+    polyu = fliplr(u);
+    polyg = fliplr(g);
     v = mod(conv(polyu, polyg), 2);
-    v = fliprl(v);
+    v = fliplr(v);
 end
 
