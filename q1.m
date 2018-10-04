@@ -1,14 +1,13 @@
-ns = [ 8, 10, 12, 14, 16];
-ks = [ 5, 6, 7, 8, 9];
+ns = [ 8, 10, 12, 14, 16]
+ks = [ 5, 6, 7, 8, 9]
 
-numpares = length(ns);
-for i = 1:numpares
-   n = ns(i);
-   k = ks(i);
-   
-  g_otimo = find_g_opt(n,k);
-   
-   [str] = sprintf('Para n = %d e k = %d', n, k)
-   g_otimo
+geradores = {};
+
+for i = 1: length(ns)
+    n = ns(i);
+    k = ks(i);
+    
+    geradores{length(geradores)+1} = cyclpoly(n,k,'all');
 end
 
+geradores
